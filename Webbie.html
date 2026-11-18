@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Krysha Ann Uraga — Bookkeeping &amp; Accounting Specialist</title>
+<meta name="description" content="Professional bookkeeping and accounting support for startups, entrepreneurs, freelancers and small business owners. Clean books, clear reports, dependable support." />
+<meta property="og:title" content="Krysha Ann Uraga — Bookkeeping &amp; Accounting Specialist" />
+<meta property="og:description" content="Your Numbers, Organized. Your Business, Empowered." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --navy:#0B1F33;
+  --navy-700:#122B45;
+  --navy-900:#071626;
+  --gold:#C6A15B;
+  --gold-soft:#E1CBA1;
+  --beige:#F7F3EC;
+  --beige-2:#EFE7D9;
+  --white:#FFFFFF;
+  --ink:#0E2136;
+  --muted:#5C6E7F;
+  --line:rgba(11,31,51,.12);
+  --line-soft:rgba(255,255,255,.14);
+  --shadow-sm:0 2px 10px rgba(11,31,51,.05);
+  --shadow-md:0 18px 46px -24px rgba(11,31,51,.28);
+  --shadow-lg:0 40px 90px -50px rgba(11,31,51,.55);
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --r-sm:8px; --r-md:14px; --r-lg:22px;
+  --wrap:1180px;
+  --pad:clamp(20px,4vw,48px);
+  --sec:clamp(72px,9vw,128px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);color:var(--ink);background:var(--white);
+  font-size:16.5px;line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.015em;margin:0;color:var(--navy)}
+p{margin:0}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);
+  font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);display:block}
+.eyebrow.on-dark{color:var(--gold-soft)}
+.sec-head{max-width:720px}
+.sec-head h2{font-size:clamp(30px,4.1vw,50px);margin-top:18px}
+.sec-head p{margin-top:20px;color:var(--muted);font-size:17px;max-width:60ch}
+.lede{font-size:clamp(16px,1.5vw,18.5px);color:var(--muted)}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--sans);font-size:14.5px;font-weight:600;letter-spacing:.02em;
+  padding:16px 30px;border-radius:999px;border:1px solid transparent;cursor:pointer;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,color .3s,box-shadow .3s,border-color .3s;
+  white-space:nowrap;
+}
+.btn svg{width:16px;height:16px;transition:transform .35s}
+.btn-gold{background:var(--gold);color:#14202C;box-shadow:0 14px 30px -16px rgba(198,161,91,.85)}
+.btn-gold:hover{background:#B98F44;transform:translateY(-2px);box-shadow:0 20px 38px -16px rgba(198,161,91,.95)}
+.btn-gold:hover svg{transform:translateX(3px)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--navy-700);transform:translateY(-2px)}
+.btn-navy:hover svg{transform:translateX(3px)}
+.btn-ghost{border-color:rgba(255,255,255,.38);color:var(--white)}
+.btn-ghost:hover{border-color:var(--gold-soft);background:rgba(255,255,255,.07);transform:translateY(-2px)}
+.btn-outline{border-color:rgba(11,31,51,.24);color:var(--navy)}
+.btn-outline:hover{border-color:var(--navy);background:rgba(11,31,51,.04);transform:translateY(-2px)}
+
+/* ============ NAV ============ */
+.nav{position:fixed;inset:0 0 auto 0;z-index:80;transition:background .4s,box-shadow .4s,backdrop-filter .4s;padding-block:18px}
+.nav.scrolled{background:rgba(255,255,255,.93);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(11,31,51,.08);padding-block:10px}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.mono{
+  width:44px;height:44px;flex:0 0 auto;border-radius:12px;display:grid;place-items:center;
+  background:var(--navy);color:var(--gold-soft);font-family:var(--serif);font-size:16px;
+  letter-spacing:.04em;border:1px solid rgba(198,161,91,.5);
+}
+.brand-name{font-family:var(--serif);font-size:16.5px;font-weight:600;color:var(--navy);line-height:1.2;letter-spacing:.01em}
+.brand-sub{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:13.5px;font-weight:500;letter-spacing:.03em;color:#243A4E;position:relative;padding-block:4px}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .35s}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav .btn{padding:12px 22px;font-size:13px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid rgba(11,31,51,.16);background:rgba(255,255,255,.7);cursor:pointer;place-items:center}
+.burger span{display:block;width:18px;height:1.6px;background:var(--navy);margin:3.2px auto;transition:.3s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(4.8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-4.8px) rotate(-45deg)}
+/* nav over the dark hero (before scrolling) */
+.nav:not(.scrolled) .brand-name{color:#fff}
+.nav:not(.scrolled) .brand-sub{color:rgba(255,255,255,.55)}
+.nav:not(.scrolled) .mono{background:rgba(255,255,255,.07);border-color:rgba(198,161,91,.55)}
+.nav:not(.scrolled) .nav-links a{color:rgba(255,255,255,.88)}
+.nav:not(.scrolled) .nav-links a:hover{color:#fff}
+.nav:not(.scrolled) .burger{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.08)}
+.nav:not(.scrolled) .burger span{background:#fff}
+.mobile-panel{
+  display:none;position:fixed;inset:0;z-index:79;background:var(--navy);
+  padding:100px var(--pad) 40px;flex-direction:column;gap:2px;
+}
+.mobile-panel.open{display:flex}
+.mobile-panel a{color:rgba(255,255,255,.88);font-family:var(--serif);font-size:25px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.mobile-panel .btn{margin-top:26px;align-self:flex-start}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;background:var(--navy);color:#fff;overflow:hidden;
+  padding:clamp(128px,16vh,180px) 0 clamp(70px,9vw,110px);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(900px 520px at 82% 8%,rgba(198,161,91,.20),transparent 62%),
+    radial-gradient(760px 500px at 8% 92%,rgba(56,104,150,.30),transparent 65%);
+  pointer-events:none;
+}
+.hero-grid-lines{
+  position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:78px 78px;
+  mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 20%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 20%,transparent 78%);
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(38px,5vw,72px);align-items:center}
+.hero h1{
+  color:#fff;font-size:clamp(38px,5.6vw,68px);line-height:1.05;margin-top:24px;
+  letter-spacing:-.028em;font-weight:500;
+}
+.hero h1 em{font-style:italic;color:var(--gold-soft);font-weight:400}
+.hero-sub{margin-top:26px;max-width:52ch;color:rgba(255,255,255,.76);font-size:clamp(15.5px,1.5vw,17.5px);line-height:1.78}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px;padding-top:26px;border-top:1px solid rgba(255,255,255,.13)}
+.hero-tags span{
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62);
+  font-weight:500;
+}
+.hero-tags span + span::before{content:"·";margin-right:12px;color:var(--gold)}
+/* portrait card */
+.portrait-shell{position:relative;max-width:390px;margin-inline:auto;width:100%}
+.portrait-frame{
+  position:relative;border-radius:24px;overflow:hidden;background:var(--beige);
+  border:1px solid rgba(198,161,91,.42);box-shadow:var(--shadow-lg);
+  aspect-ratio:4/5;display:grid;place-items:center;padding:26px;
+}
+.portrait-frame::after{
+  content:"";position:absolute;inset:14px;border:1px solid rgba(11,31,51,.10);border-radius:16px;pointer-events:none;
+}
+.portrait-inner{position:relative;text-align:center;display:grid;gap:14px;justify-items:center;z-index:2}
+.portrait-mono{
+  width:104px;height:104px;border-radius:50%;display:grid;place-items:center;
+  background:var(--navy);color:var(--gold-soft);font-family:var(--serif);font-size:33px;letter-spacing:.03em;
+  box-shadow:0 18px 36px -20px rgba(11,31,51,.7);
+}
+.portrait-note{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7A8794;font-weight:600;line-height:1.7;max-width:24ch;
+}
+.portrait-caption{margin-top:22px;text-align:center}
+.portrait-caption strong{display:block;font-family:var(--serif);font-size:20px;color:#fff;font-weight:500}
+.portrait-caption span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;display:block;margin-top:5px}
+.portrait-badge{
+  position:absolute;left:-16px;top:56%;background:#fff;border-radius:14px;padding:14px 18px;z-index:3;
+  box-shadow:var(--shadow-md);display:flex;align-items:center;gap:11px;border:1px solid rgba(11,31,51,.06);
+}
+.portrait-badge svg{width:20px;height:20px;color:var(--gold)}
+.portrait-badge b{display:block;font-size:12.5px;color:var(--navy);font-weight:600;line-height:1.3}
+.portrait-badge i{display:block;font-style:normal;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+
+/* ============ MARQUEE / TRUST STRIP ============ */
+.strip{background:var(--beige);border-bottom:1px solid rgba(11,31,51,.07)}
+.strip-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(18px,4vw,56px);padding-block:22px}
+.strip-item{display:flex;align-items:center;gap:9px;font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:#3B5065;font-weight:600}
+.strip-item svg{width:15px;height:15px;color:var(--gold)}
+
+/* ============ SECTIONS ============ */
+section{position:relative}
+.pad{padding-block:var(--sec)}
+.bg-beige{background:var(--beige)}
+.bg-navy{background:var(--navy);color:#fff}
+.bg-navy h2,.bg-navy h3{color:#fff}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(36px,6vw,84px);align-items:start}
+.about-visual{position:relative}
+.about-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(26px,3.4vw,38px);box-shadow:var(--shadow-md);position:relative;overflow:hidden;
+}
+.about-card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-soft),transparent)}
+.about-card .quote{font-family:var(--serif);font-size:clamp(20px,2.3vw,26px);line-height:1.42;color:var(--navy);font-weight:500}
+.about-card .quote-mark{font-family:var(--serif);font-size:58px;line-height:.6;color:var(--gold-soft);display:block;margin-bottom:6px}
+.about-facts{list-style:none;margin:26px 0 0;padding:22px 0 0;border-top:1px solid var(--line);display:grid;gap:13px}
+.about-facts li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:#334A5E}
+.about-facts svg{width:16px;height:16px;color:var(--gold);flex:0 0 auto;margin-top:4px}
+.about-body p + p{margin-top:18px}
+.about-body .lede{color:#3C5368}
+.about-signature{
+  margin-top:32px;padding-top:22px;border-top:1px solid var(--line);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.about-signature .sig{font-family:var(--serif);font-size:24px;color:var(--navy);font-style:italic}
+.about-signature .role{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.placeholder-inline{
+  display:inline-block;background:rgba(198,161,91,.14);border:1px dashed rgba(198,161,91,.75);
+  color:#7A6228;border-radius:6px;padding:1px 7px;font-size:13px;font-weight:500;
+}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.svc-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:clamp(26px,3vw,34px);position:relative;overflow:hidden;
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .45s;
+  display:flex;flex-direction:column;
+}
+.svc-card::after{
+  content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .5s ease;
+}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:rgba(198,161,91,.55)}
+.svc-card:hover::after{width:100%}
+.svc-icon{
+  width:52px;height:52px;border-radius:13px;background:var(--beige);display:grid;place-items:center;
+  border:1px solid rgba(198,161,91,.28);margin-bottom:22px;transition:background .4s,border-color .4s;
+}
+.svc-icon svg{width:23px;height:23px;color:var(--navy);transition:color .4s}
+.svc-card:hover .svc-icon{background:var(--navy);border-color:var(--navy)}
+.svc-card:hover .svc-icon svg{color:var(--gold-soft)}
+.svc-card h3{font-size:20.5px;margin-bottom:11px;letter-spacing:-.01em}
+.svc-card p{font-size:14.5px;color:var(--muted);line-height:1.72}
+.svc-num{position:absolute;top:22px;right:26px;font-family:var(--serif);font-size:13px;color:rgba(11,31,51,.22);letter-spacing:.1em}
+.svc-foot{margin-top:38px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.svc-foot svg{width:16px;height:16px;color:var(--gold)}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(36px,6vw,80px);align-items:center}
+.why-list{display:grid;gap:0;margin-top:8px}
+.why-item{
+  display:grid;grid-template-columns:auto 1fr;gap:20px;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.12);
+  transition:background .35s;
+}
+.why-item:first-child{border-top:1px solid rgba(255,255,255,.12)}
+.why-item .n{
+  font-family:var(--serif);font-size:13px;color:var(--gold-soft);border:1px solid rgba(198,161,91,.45);
+  width:38px;height:38px;border-radius:50%;display:grid;place-items:center;letter-spacing:.05em;
+}
+.why-item h4{font-size:18px;color:#fff;font-weight:500;margin-bottom:5px}
+.why-item p{font-size:14.5px;color:rgba(255,255,255,.66);line-height:1.7;max-width:46ch}
+.why-visual{
+  position:relative;border:1px solid rgba(255,255,255,.14);border-radius:var(--r-lg);
+  padding:clamp(28px,3.6vw,44px);background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+  box-shadow:0 40px 80px -60px rgba(0,0,0,.8);
+}
+.why-visual .tick{width:46px;height:46px;border-radius:50%;background:rgba(198,161,91,.16);display:grid;place-items:center;border:1px solid rgba(198,161,91,.4);margin-bottom:24px}
+.why-visual .tick svg{width:22px;height:22px;color:var(--gold-soft)}
+.why-visual h3{font-size:clamp(22px,2.5vw,29px);line-height:1.28;font-weight:500}
+.why-visual p{margin-top:16px;color:rgba(255,255,255,.68);font-size:15px}
+.why-visual .rule{height:1px;background:rgba(255,255,255,.14);margin:26px 0}
+.why-mini{display:grid;gap:12px}
+.why-mini div{display:flex;align-items:center;gap:11px;font-size:13.5px;color:rgba(255,255,255,.8)}
+.why-mini svg{width:15px;height:15px;color:var(--gold);flex:0 0 auto}
+
+/* PROCESS */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;position:relative}
+.proc-grid::before{
+  content:"";position:absolute;top:29px;left:8%;right:8%;height:1px;
+  background:linear-gradient(90deg,rgba(198,161,91,.15),rgba(198,161,91,.7),rgba(198,161,91,.15));
+}
+.proc-step{padding:0 clamp(10px,1.6vw,22px);position:relative}
+.proc-dot{
+  width:58px;height:58px;border-radius:50%;background:var(--white);border:1px solid rgba(198,161,91,.55);
+  display:grid;place-items:center;font-family:var(--serif);font-size:17px;color:var(--navy);
+  position:relative;z-index:2;box-shadow:0 10px 26px -18px rgba(11,31,51,.6);margin-bottom:24px;
+  transition:background .4s,color .4s,transform .4s;
+}
+.proc-step:hover .proc-dot{background:var(--navy);color:var(--gold-soft);transform:translateY(-3px)}
+.proc-step h4{font-size:18.5px;margin-bottom:10px;line-height:1.3}
+.proc-step p{font-size:14px;color:var(--muted);line-height:1.72}
+
+/* CTA BAND */
+.cta-band{background:var(--navy);position:relative;overflow:hidden;padding-block:clamp(72px,9vw,112px)}
+.cta-band::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(720px 420px at 78% 20%,rgba(198,161,91,.22),transparent 65%);
+}
+.cta-band::after{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:1px solid rgba(255,255,255,.07);
+  right:-160px;bottom:-240px;
+}
+.cta-band h2,.cta-band h3{color:#fff}
+.cta-inner{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(32px,5vw,64px);align-items:center}
+.cta-inner h2{font-size:clamp(29px,4vw,47px);line-height:1.1;max-width:20ch;color:#fff}
+.cta-inner p{margin-top:20px;color:rgba(255,255,255,.72);max-width:48ch;font-size:16px}
+.cta-actions{display:flex;flex-direction:column;gap:14px}
+.cta-actions .btn{width:100%}
+.cta-note{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);text-align:center;margin-top:4px}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(34px,5vw,68px);align-items:start}
+.contact-list{list-style:none;padding:0;margin:36px 0 0;display:grid;gap:1px;background:var(--line);border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line)}
+.contact-item{background:var(--white);padding:22px 24px;display:flex;gap:16px;align-items:flex-start;transition:background .35s}
+.contact-item:hover{background:#FCFAF6}
+.contact-item .ci{width:40px;height:40px;border-radius:11px;background:var(--beige);display:grid;place-items:center;flex:0 0 auto;border:1px solid rgba(198,161,91,.28)}
+.contact-item svg{width:17px;height:17px;color:var(--navy)}
+.contact-item .cl{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+.contact-item .cv{font-size:15px;color:var(--navy);font-weight:500;word-break:break-word;line-height:1.45}
+.contact-item .cv small{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:3px}
+.ph{color:#8A6E2E;background:rgba(198,161,91,.14);border-bottom:1px dashed rgba(198,161,91,.8);padding:0 4px;border-radius:3px}
+.form-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:clamp(26px,3.6vw,44px);box-shadow:var(--shadow-md);
+}
+.form-card h3{font-size:clamp(21px,2.4vw,27px);margin-bottom:8px}
+.form-card > p{font-size:14px;color:var(--muted);margin-bottom:26px}
+.field{display:grid;gap:7px;margin-bottom:16px}
+.field label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#3F5568;font-weight:600}
+.field input,.field select,.field textarea{
+  font-family:var(--sans);font-size:14.5px;color:var(--ink);background:#FCFBF8;
+  border:1px solid rgba(11,31,51,.16);border-radius:10px;padding:13px 15px;width:100%;
+  transition:border-color .25s,box-shadow .25s,background .25s;
+}
+.field textarea{resize:vertical;min-height:118px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--gold);background:#fff;box-shadow:0 0 0 4px rgba(198,161,91,.14);
+}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-foot{margin-top:8px}
+.form-foot .btn{width:100%}
+.form-note{font-size:11.5px;color:#8493A0;margin-top:14px;line-height:1.6;text-align:center}
+.hp{position:absolute;left:-9999px}
+
+/* FOOTER */
+footer{background:var(--navy-900);color:rgba(255,255,255,.62);padding-block:52px}
+.foot-top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand{display:flex;gap:14px;align-items:center}
+.foot-brand .mono{background:transparent}
+.foot-brand b{display:block;font-family:var(--serif);font-size:17px;color:#fff;font-weight:600}
+.foot-brand span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap}
+.foot-links a{font-size:13px;color:rgba(255,255,255,.7)}
+.foot-links a:hover{color:var(--gold-soft)}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:12px}
+.foot-bottom .note{max-width:62ch;color:rgba(255,255,255,.4);line-height:1.7}
+
+/* ============ REVEAL ============ */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .85s cubic-bezier(.2,.8,.2,1),transform .85s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.09s}.rv.d2{transition-delay:.18s}.rv.d3{transition-delay:.27s}.rv.d4{transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1!important;transform:none!important;transition:none!important}
+  *{animation:none!important;transition:none!important}
+}
+.hero-anim{opacity:0;transform:translateY(18px);animation:rise .95s cubic-bezier(.2,.8,.2,1) forwards}
+.hero-anim.a2{animation-delay:.12s}.hero-anim.a3{animation-delay:.24s}.hero-anim.a4{animation-delay:.36s}.hero-anim.a5{animation-delay:.48s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1024px){
+  .nav-links{display:none}
+  .nav .nav-cta .btn{display:none}
+  .burger{display:grid}
+  .hero-grid{grid-template-columns:1fr;gap:52px}
+  .portrait-shell{max-width:360px;order:2}
+  .hero-tags{margin-top:34px}
+  .about-grid,.why-grid,.contact-grid,.cta-inner{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .proc-grid{grid-template-columns:repeat(2,1fr);gap:38px 0}
+  .proc-grid::before{display:none}
+  .why-visual{order:-1}
+  .portrait-badge{left:auto;right:14px;top:auto;bottom:78px}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .svc-grid{grid-template-columns:1fr;gap:16px;margin-top:40px}
+  .proc-grid{grid-template-columns:1fr;gap:0;margin-top:44px}
+  .proc-step{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:0 0 30px;align-items:start}
+  .proc-dot{margin-bottom:0;width:50px;height:50px;font-size:15px}
+  .proc-step h4{margin-top:12px}
+  .field-row{grid-template-columns:1fr}
+  .hero{padding-top:112px}
+  .hero-actions .btn{width:100%}
+  .strip-inner{gap:14px 22px;justify-content:flex-start}
+  .foot-bottom{flex-direction:column}
+  .about-signature{gap:8px}
+  .why-item{padding:20px 0;gap:14px}
+  .portrait-frame{aspect-ratio:1/1}
+  .mobile-panel a{font-size:22px}
+  .cta-actions{margin-top:8px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" aria-label="Krysha Ann Uraga — Bookkeeping and Accounting Specialist">
+      <div class="mono">KA</div>
+      <div>
+        <div class="brand-name">Krysha Ann Uraga</div>
+        <div class="brand-sub">Bookkeeping &amp; Accounting</div>
+      </div>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Me</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-gold">Book a Free Consultation</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#why">Why Me</a>
+  <a href="#process">Process</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-gold">Book a Free Consultation</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow on-dark hero-anim">Bookkeeping &amp; Accounting Specialist</span>
+      <h1 class="hero-anim a2">Your Numbers, Organized.<br><em>Your Business, Empowered.</em></h1>
+      <p class="hero-sub hero-anim a3">
+        Accurate books are the quiet foundation of every confident business decision. I provide
+        organized, reliable bookkeeping and accounting support so you always know where your money
+        stands — and can spend your energy on growth instead of spreadsheets.
+      </p>
+      <div class="hero-actions hero-anim a4">
+        <a href="#contact" class="btn btn-gold">Book a Free Consultation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost">Explore My Services</a>
+      </div>
+      <div class="hero-tags hero-anim a5">
+        <span>For Startups</span>
+        <span>Entrepreneurs</span>
+        <span>Freelancers</span>
+        <span>Small Businesses</span>
+      </div>
+    </div>
+
+    <div class="portrait-shell hero-anim a3">
+      <div class="portrait-frame">
+      <img class="portrait-photo" src="https://i.ibb.co/RTYwfDGY/image.png" alt="Krysha Ann Uraga, Bookkeeping & Accounting Specialist">
+      </div>
+       <div class="portrait-caption">
+        <strong>Krysha Ann Uraga</strong>
+        <span>Bookkeeping &amp; Accounting Specialist</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<div class="strip">
+  <div class="wrap strip-inner">
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Accurate Records</div>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Confidential Handling</div>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Timely Reporting</div>
+    <div class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M16 8h5v5"/></svg>Growth-Focused Insight</div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="pad" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual rv">
+      <div class="about-card">
+        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+        <p class="quote">Good bookkeeping isn't paperwork. It's the clarity that lets an owner decide with confidence.</p>
+        <ul class="about-facts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Detail-oriented, structured approach to every ledger</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Confidentiality treated as a professional obligation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Deadlines and reporting cycles you can plan around</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Plain-language communication, never accounting jargon</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-body rv d1">
+      <span class="eyebrow">About</span>
+      <h2 style="font-size:clamp(30px,4.1vw,50px);margin-top:18px">A steady hand for the numbers behind your business.</h2>
+      <p class="lede" style="margin-top:22px">
+        I'm Krysha Ann Uraga, a bookkeeping and accounting specialist supporting startups,
+        entrepreneurs, freelancers and small business owners who need their finances handled
+        properly — not squeezed in between other tasks.
+      </p>
+      <p style="margin-top:18px;color:var(--muted)">
+        My work is built on accuracy and organization: transactions recorded consistently, accounts
+        reconciled, records structured so they can be trusted, reviewed, and handed to a lender,
+        auditor, or tax professional without apology. I treat every client's financial data with
+        the confidentiality it deserves, and I communicate in plain language so you always
+        understand what your numbers are saying.
+      </p>
+      <p style="margin-top:18px;color:var(--muted)">
+        Whether you're catching up on overdue books, preparing for a busy season, or simply want a
+        dependable professional keeping your records current, my role is to make that part of your
+        business quiet, orderly, and off your mind.
+      </p>
+
+
+
+      <div class="about-signature">
+        <span class="sig">Krysha Ann Uraga</span>
+        <span class="role">Bookkeeping &amp; Accounting Specialist</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="pad bg-beige" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Services</span>
+      <h2>Support built around how your business actually runs.</h2>
+      <p>Focused, practical services — from day-to-day bookkeeping to reporting you can act on. Every engagement starts with a clear scope, so you know exactly what's covered.</p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc-card rv">
+        <span class="svc-num">01</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H5.5A1.5 1.5 0 0 1 4 19.5z"/><path d="M8 7h8M8 11h5M8 15h7"/></svg>
+        </div>
+        <h3>Bookkeeping Services</h3>
+        <p>Your daily transactions recorded, categorized and kept current — so your books always reflect what actually happened in the business, month after month.</p>
+      </article>
+
+      <article class="svc-card rv d1">
+        <span class="svc-num">02</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+        </div>
+        <h3>Financial Reporting</h3>
+        <p>Profit &amp; loss, balance sheet and cash flow prepared and explained in plain language, so you can see performance clearly and decide with confidence.</p>
+      </article>
+
+      <article class="svc-card rv d2">
+        <span class="svc-num">03</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13l-3-3M21 17H8l3 3"/><circle cx="18" cy="7" r="3"/><circle cx="6" cy="17" r="3"/></svg>
+        </div>
+        <h3>Accounts Payable &amp; Receivable</h3>
+        <p>Know what you owe and what you're owed. Organized schedules, clear aging reports, and a dependable system for tracking invoices in and out.</p>
+      </article>
+
+      <article class="svc-card rv">
+        <span class="svc-num">04</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg>
+        </div>
+        <h3>Bank Reconciliation</h3>
+        <p>Every account matched against its statement, with discrepancies identified and resolved early — not discovered at year-end when they're hardest to fix.</p>
+      </article>
+
+      <article class="svc-card rv d1">
+        <span class="svc-num">05</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M9 12h6M9 16h4"/></svg>
+        </div>
+        <h3>Financial Record Organization</h3>
+        <p>A clean chart of accounts, consistent categories and an orderly document trail — a system any accountant, lender or auditor can pick up without confusion.</p>
+      </article>
+
+      <article class="svc-card rv d2">
+        <span class="svc-num">06</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg>
+        </div>
+        <h3>Project-Based Accounting Support</h3>
+        <p>Cleanup, catch-up bookkeeping, system migration or audit preparation — a defined scope, a clear timeline, and a finished outcome you can rely on.</p>
+      </article>
+    </div>
+
+    <div class="svc-foot rv">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      Not sure which service fits? A free consultation is the fastest way to find out.
+      <a href="#contact" style="color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)">Start here</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY WORK WITH ME ================= -->
+<section class="pad bg-navy" id="why">
+  <div class="wrap why-grid">
+    <div class="rv">
+      <span class="eyebrow on-dark">Why Work With Me</span>
+      <h2 style="font-size:clamp(30px,4.1vw,48px);margin-top:18px">The difference is in the discipline.</h2>
+      <p style="margin-top:20px;color:rgba(255,255,255,.7);max-width:46ch;font-size:16px">
+        Bookkeeping is only valuable when it's done consistently and carefully. These are the
+        standards every engagement is held to.
+      </p>
+
+      <div class="why-list">
+        <div class="why-item">
+          <span class="n">01</span>
+          <div>
+            <h4>Accuracy and Attention to Detail</h4>
+            <p>Every entry reviewed, every account reconciled — because small errors compound into expensive ones.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="n">02</span>
+          <div>
+            <h4>Reliable and Timely Support</h4>
+            <p>Agreed schedules and reporting dates you can build your month around, not chase.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="n">03</span>
+          <div>
+            <h4>Confidentiality and Professionalism</h4>
+            <p>Your financial information handled with discretion, secure practices, and complete professionalism.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="n">04</span>
+          <div>
+            <h4>Organized Financial Records</h4>
+            <p>Structured files and a consistent chart of accounts — books that are easy to review and easy to hand over.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <span class="n">05</span>
+          <div>
+            <h4>Personalized Client Assistance</h4>
+            <p>Direct communication with the person doing the work, and support shaped around your business — not a template.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="why-visual rv d1">
+      <div class="tick">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <h3>Financial clarity you can actually rely on.</h3>
+      <p>
+        Accurate records do more than satisfy compliance. They show you which clients are profitable,
+        where cash is leaking, and what you can safely invest in next.
+      </p>
+      <div class="rule"></div>
+      <div class="why-mini">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Books closed on a predictable schedule</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reports written for owners, not accountants</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Documentation ready for tax season</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>One consistent point of contact</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="pad" id="process">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">My Work Process</span>
+      <h2>Simple, transparent, and built to remove the guesswork.</h2>
+      <p>Four steps from first conversation to clean, usable financial reports — with no surprises in between.</p>
+    </div>
+
+    <div class="proc-grid">
+      <div class="proc-step rv">
+        <div class="proc-dot">01</div>
+        <div>
+          <h4>Initial Consultation</h4>
+          <p>A free conversation about your business, your current records, and where the gaps are. No obligation, no jargon.</p>
+        </div>
+      </div>
+      <div class="proc-step rv d1">
+        <div class="proc-dot">02</div>
+        <div>
+          <h4>Understanding Your Business Needs</h4>
+          <p>I map your accounts, transaction flow and reporting needs, then agree a clear scope and schedule in writing.</p>
+        </div>
+      </div>
+      <div class="proc-step rv d2">
+        <div class="proc-dot">03</div>
+        <div>
+          <h4>Organizing &amp; Managing Financial Records</h4>
+          <p>Records are structured, transactions recorded, accounts reconciled — and kept current on an agreed rhythm.</p>
+        </div>
+      </div>
+      <div class="proc-step rv d3">
+        <div class="proc-dot">04</div>
+        <div>
+          <h4>Delivering Clear Financial Reports</h4>
+          <p>You receive organized reports with a plain-language summary of what changed and what it means for your business.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA BAND ================= -->
+<section class="cta-band">
+  <div class="wrap cta-inner">
+    <div class="rv">
+      <span class="eyebrow on-dark">Let's Begin</span>
+      <h2 style="margin-top:18px">Let's Make Your Finances Easier to Manage.</h2>
+      <p>
+        Whether your books are behind, disorganized, or simply taking too much of your week —
+        a short consultation will show you exactly what needs to happen next.
+      </p>
+    </div>
+    <div class="cta-actions rv d1">
+      <a href="#contact" class="btn btn-gold">Schedule a Consultation
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-ghost">Send an Inquiry</a>
+      <span class="cta-note">Free · No obligation</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="pad bg-beige" id="contact">
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <span class="eyebrow">Contact</span>
+      <h2 style="font-size:clamp(30px,4.1vw,48px);margin-top:18px">Let's talk about your books.</h2>
+      <p style="margin-top:20px;color:var(--muted);max-width:44ch">
+        Tell me a little about your business and where your records currently stand. I'll reply with
+        a clear next step and an honest recommendation.
+      </p>
+
+      <ul class="contact-list">
+        <li class="contact-item">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <div>
+            <div class="cl">Email</div>
+            <div class="cv"><span class="ph">kryshaannuraga@gmail.com</span><small>Replace with your professional email address</small></div>
+          </div>
+        </li>
+        <li class="contact-item">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 0 12H8a6 6 0 0 1 0-12z" opacity=".2"/><rect x="2" y="9" width="4" height="6" rx="1"/><rect x="18" y="9" width="4" height="6" rx="1"/><path d="M6 9v6M18 9v6"/><rect x="2" y="9" width="20" height="6" rx="3"/></svg></span>
+          <div>
+            <div class="cl">LinkedIn</div>
+            <div class="cv"><a href="https://ph.linkedin.com/in/krysha-ann-uraga" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold)">linkedin.com/in/krysha-ann-uraga</a><small>Public profile — confirm the URL is current before publishing</small></div>
+          </div>
+        </li>
+        <li class="contact-item">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <div>
+            <div class="cl">Based In</div>
+            <div class="cv"><span class="ph">Manila, Philippines</span><small>Remote support
+          </div>
+        </li>
+        <li class="contact-item">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v2.6a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 3.7 2 2 0 0 1 4.1 1.5h2.6a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.8 9.3a16 16 0 0 0 6 6l1.2-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div>
+            <div class="cl">Phone / WhatsApp</div>
+            <div class="cv"><span class="ph">+63 967 443 5339</span><small>Optional — remove this card if you prefer email only</small></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="form-card rv d1">
+      <h3>Send an inquiry</h3>
+      <p>Share a few details and I'll get back to you with a clear next step.</p>
+
+      <!--
+        ============================================================
+        CONTACT FORM — HOW TO MAKE IT LIVE (no backend required)
+        ============================================================
+        Option A — Formspree (recommended):
+          1. Create a free form at https://formspree.io
+          2. Replace YOUR_FORM_ID below with your form ID.
+          3. Set method="POST" and delete the JS mailto handler
+             (marked "MAILTO FALLBACK" further down).
+        Option B — Mailto fallback (works with zero setup):
+          The script below builds an email to YOUR_EMAIL with the
+          form contents. Replace YOUR_EMAIL with your real address.
+          Note: mailto opens the visitor's own email app.
+        ============================================================
+      -->
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="jane@company.com" required autocomplete="email">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="business">Business name</label>
+            <input id="business" name="business" type="text" placeholder="Optional" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="service">Service needed</label>
+            <select id="service" name="service">
+              <option>Bookkeeping Services</option>
+              <option>Financial Reporting</option>
+              <option>Accounts Payable &amp; Receivable</option>
+              <option>Bank Reconciliation</option>
+              <option>Financial Record Organization</option>
+              <option>Project-Based Accounting Support</option>
+              <option>Not sure yet — please advise</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">How can I help?</label>
+          <textarea id="message" name="message" placeholder="A short note about your business, your current bookkeeping setup, and what you'd like to improve." required></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="company_website">Leave this field empty</label>
+          <input id="company_website" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-navy">Send Inquiry
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
+          </button>
+        </div>
+        <p class="form-note">
+          Your details are kept confidential and used only to respond to your inquiry.
+          Prefer email? Write to <span class="ph">[your.email@example.com]</span>
+        </p>
+        <p class="form-note" id="formStatus" role="status" aria-live="polite" style="color:#2E7D52;font-weight:600"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="mono">KA</div>
+        <div>
+          <b>Krysha Ann Uraga</b>
+          <span>Bookkeeping &amp; Accounting Specialist</span>
+        </div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Me</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <a href="https://ph.linkedin.com/in/krysha-ann-uraga" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <div>&copy; <span id="year">2026</span> Krysha Ann Uraga. All rights reserved.</div>
+      <div class="note">Content placeholders are marked in gold brackets and must be confirmed or replaced before publishing. No certifications, performance figures or client testimonials are claimed on this page.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- NAV: shrink on scroll ---------- */
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+onScroll();
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* ---------- MOBILE MENU ---------- */
+const burger = document.getElementById('burger');
+const panel  = document.getElementById('mobilePanel');
+const setMenu = (open) => {
+  burger.setAttribute('aria-expanded', String(open));
+  burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  panel.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+};
+burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+window.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+/* ---------- SCROLL REVEAL ---------- */
+const items = document.querySelectorAll('.rv');
+if ('IntersectionObserver' in window){
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold: .14, rootMargin:'0px 0px -8% 0px'});
+  items.forEach(el => io.observe(el));
+} else {
+  items.forEach(el => el.classList.add('in'));
+}
+
+/* ---------- YEAR ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- FORM: MAILTO FALLBACK ----------
+   Active only until you connect Formspree. Replace YOUR_EMAIL
+   with your real address, or delete this block after going live. */
+const YOUR_EMAIL = 'your.email@example.com';
+const form = document.getElementById('contactForm');
+const status = document.getElementById('formStatus');
+
+form.addEventListener('submit', (e) => {
+  // If the placeholder Formspree ID is still in place, fall back to mailto.
+  if (form.action.includes('YOUR_FORM_ID')) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = (data.get('name') || '').toString().trim();
+    const email = (data.get('email') || '').toString().trim();
+    const business = (data.get('business') || '').toString().trim();
+    const service = (data.get('service') || '').toString().trim();
+    const message = (data.get('message') || '').toString().trim();
+
+    if (!name || !email || !message){
+      status.style.color = '#B4453C';
+      status.textContent = 'Please complete your name, email and message.';
+      return;
+    }
+    const subject = encodeURIComponent('Bookkeeping inquiry — ' + (business || name));
+    const body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      (business ? 'Business: ' + business + '\n' : '') +
+      'Service: ' + service + '\n\n' + message
+    );
+    window.location.href = 'mailto:' + YOUR_EMAIL + '?subject=' + subject + '&body=' + body;
+    status.style.color = '#2E7D52';
+    status.textContent = 'Opening your email app… If nothing happens, email ' + YOUR_EMAIL + ' directly.';
+  }
+});
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
